@@ -117,6 +117,10 @@ A interface deverá possuir:
 * cor principal escura;
 * elementos de contraste para facilitar identificação das informações.
 
+## 5.3 Banco de dados
+
+* SQLite
+
 ---
 
 # 6. Glossário
