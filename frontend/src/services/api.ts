@@ -188,12 +188,6 @@ class ApiService {
     });
   }
 
-  async generateInstallmentTransactions(id: number) {
-    return this.request<{ message: string; generated_count: number }>(`/installments/${id}/generate`, {
-      method: 'POST',
-    });
-  }
-
   // Recurrences
   async getRecurrences() {
     return this.request<any[]>('/recurrences');
