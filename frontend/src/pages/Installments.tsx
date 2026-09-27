@@ -120,16 +120,6 @@ export function Installments() {
     }
   };
 
-  const handleGenerate = async (id: number) => {
-    try {
-      const result = await api.generateInstallmentTransactions(id);
-      alert(`${result.generated_count} transações geradas com sucesso!`);
-      fetchInstallments();
-    } catch (err: any) {
-      setError(err.message || 'Erro ao gerar parcelas');
-    }
-  };
-
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('pt-BR', {
       style: 'currency',
@@ -199,14 +189,6 @@ export function Installments() {
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleGenerate(installment.id)}
-                      title="Gerar transações"
-                    >
-                      <CreditCard className="h-4 w-4" />
-                    </Button>
                     <Button
                       variant="ghost"
                       size="icon"
