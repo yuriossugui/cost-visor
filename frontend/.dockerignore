@@ -11,5 +11,4 @@ docker-compose*.yml
 *.log
 coverage/
 .oxlintrc.json
-tsconfig*.json
 vite.config.ts
