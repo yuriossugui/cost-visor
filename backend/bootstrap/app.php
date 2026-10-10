@@ -17,6 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'auth.jwt' => \Tymon\JWTAuth\Http\Middleware\Authenticate::class,
             'auth.jwt.refresh' => \Tymon\JWTAuth\Http\Middleware\RefreshToken::class,
         ]);
+
+        $middleware->api(prepend: [
+            \Illuminate\Http\Middleware\HandleCors::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
