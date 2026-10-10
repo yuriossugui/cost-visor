@@ -12,7 +12,7 @@ const navigation = [
 
 export function Sidebar() {
 
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
 
   return (
     <aside className="fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 border-r border-gray-800 hidden lg:flex flex-col">
