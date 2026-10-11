@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   backend:
     build:
@@ -24,11 +22,7 @@ services:
       - "9000:9000"
     networks:
       - cost-visor-network
-    healthcheck:
-      test: ["CMD", "php", "artisan", "inspire"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+    
 
   frontend:
     build:
